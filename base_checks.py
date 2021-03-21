@@ -1,8 +1,10 @@
-import time
+#!/usr/bin/env python -u
+# -*- coding: utf-8 -*-
 
 import jsonschema
 import json
 import requests
+import time
 
 URL = 'http://dummy.restapiexample.com/'
 URL_GET = f'{URL}api/v1/employee/'
@@ -48,7 +50,6 @@ def send_post_dummy_rest(body):
             if _ == 9:
                 assert False, 'Many 429 Error'
         else:
-            print(response.text)
             assert_correct_response(response, RESPONSE_CODE_OK)
             scheme_validation(response, 'schemePostResponse')
             return response
@@ -69,10 +70,3 @@ def assert_correct_response(response, response_code):
         print(f'EXPECTED RESULT: {response_code}')
         print(response.json())
         assert False
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    send_post_dummy_rest()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

@@ -1,3 +1,6 @@
+#!/usr/bin/env python -u
+# -*- coding: utf-8 -*-
+
 import base_checks
 import create_customer
 
