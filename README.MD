@@ -1,0 +1,10 @@
+# Tests for Dummy API
+
+Examples of Run:
+
+* pytest -v
+
+Before running tests, you need to install requirements
+1. cd to the directory where requirements.txt is located.
+2. activate your virtualenv.
+3. run: pip install -r requirements.txt in your shell.

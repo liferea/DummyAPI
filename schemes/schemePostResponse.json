@@ -1,0 +1,106 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "status": "success",
+            "data": {
+                "name": "test",
+                "salary": "123",
+                "age": "23",
+                "id": 5892
+            },
+            "message": "Successfully! Record has been added."
+        }
+    ],
+    "required": [
+        "status",
+        "data",
+        "message"
+    ],
+    "properties": {
+        "status": {
+            "$id": "#/properties/status",
+            "type": "string",
+            "title": "The status schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "success"
+            ]
+        },
+        "data": {
+            "$id": "#/properties/data",
+            "type": "object",
+            "title": "The data schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "name": "test",
+                    "salary": "123",
+                    "age": "23",
+                    "id": 5892
+                }
+            ],
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "name": {
+                    "$id": "#/properties/data/properties/name",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "test"
+                    ]
+                },
+                "salary": {
+                    "$id": "#/properties/data/properties/salary",
+                    "title": "The salary schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "123"
+                    ]
+                },
+                "age": {
+                    "$id": "#/properties/data/properties/age",
+                    "title": "The age schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "23"
+                    ]
+                },
+                "id": {
+                    "$id": "#/properties/data/properties/id",
+                    "type": "integer",
+                    "title": "The id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        5892
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "message": {
+            "$id": "#/properties/message",
+            "type": "string",
+            "title": "The message schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Successfully! Record has been added."
+            ]
+        }
+    },
+    "additionalProperties": true
+}
